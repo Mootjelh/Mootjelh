@@ -7,8 +7,8 @@ low-latency monitoring, and the full-stack tooling that operates it.
 
 - [flatread](https://github.com/Mootjelh/flatread) · read FlatBuffers
   buffers when you don't have the schema. Field access by vtable slot
-  instead of by generated name. No dependencies, fuzz-tested so it never
-  panics on malformed input.
+  instead of by generated name, for plain and size-prefixed buffers alike.
+  No dependencies, fuzz-tested so it never panics on malformed input.
 - [proxypool](https://github.com/Mootjelh/proxypool) · rotating proxy pool
   with cooldowns. Deliberately small: no health checks, because only your
   own traffic can tell you whether an address works.
