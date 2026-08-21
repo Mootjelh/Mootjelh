@@ -25,7 +25,8 @@ have to stay fast under heavy concurrency. Real-time Discord tooling,
 scraping and database sync. Monitoring with sub-second reaction times.
 Dashboards and API backends to drive all of it.
 
-Currently reverse engineering binary inventory payloads, and writing up why
-nearly every "they're blocking us" diagnosis turned out to be my own bug.
+[**field-notes**](https://github.com/Mootjelh/field-notes) · what I learned
+from being confidently wrong 74 times while reverse engineering a
+bot-protected site. 71 of them were my own bug.
 
 Available for project work and monthly retainers.
