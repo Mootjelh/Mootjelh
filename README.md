@@ -16,6 +16,10 @@ low-latency monitoring, and the full-stack tooling that operates it.
   captures. Matches requests by endpoint rather than by full URL, so a cache
   buster does not turn every call into one request removed and one added, and
   compares JSON bodies field by field instead of as a blob.
+- [flatschema](https://github.com/Mootjelh/flatschema) · infer a FlatBuffers
+  schema from sample buffers. Merges what each sample populated and writes the
+  .fbs they imply, keeping the slot numbering right where a field nothing
+  populated would otherwise shift every field after it.
 
 ### Stack
 
