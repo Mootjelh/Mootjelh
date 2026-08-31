@@ -38,3 +38,4 @@ from being confidently wrong 74 times while reverse engineering a
 bot-protected site. 71 of them were my own bug.
 
 Available for project work and monthly retainers.
+Reach me at [info@mh-automation.nl](mailto:info@mh-automation.nl).
