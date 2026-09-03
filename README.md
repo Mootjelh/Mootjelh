@@ -21,6 +21,13 @@ low-latency monitoring, and the full-stack tooling that operates it.
   .fbs they imply, keeping the slot numbering right where a field nothing
   populated would otherwise shift every field after it.
 
+### Upstream
+
+- [bogdanfinn/tls-client#266](https://github.com/bogdanfinn/tls-client/pull/266) ·
+  a cached transport was reused after the server changed the protocol it
+  negotiated, so an HTTP/1 transport read an HTTP/2 SETTINGS frame as a status
+  line. Merged, in v1.16.0.
+
 ### Stack
 
 Go · TypeScript · Node · React / Next.js · PostgreSQL · MongoDB · Redis ·
