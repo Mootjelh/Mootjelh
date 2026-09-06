@@ -27,6 +27,10 @@ low-latency monitoring, and the full-stack tooling that operates it.
   a cached transport was reused after the server changed the protocol it
   negotiated, so an HTTP/1 transport read an HTTP/2 SETTINGS frame as a status
   line. Merged, in v1.16.0.
+- [bogdanfinn/tls-client#270](https://github.com/bogdanfinn/tls-client/pull/270) ·
+  the transport cache was written from a reconnecting dial holding a different
+  mutex than the one guarding it, so a read and a write could overlap. Found
+  with the race detector. Merged.
 
 ### Stack
 
