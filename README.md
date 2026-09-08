@@ -10,8 +10,8 @@ low-latency monitoring, and the full-stack tooling that operates it.
   instead of by generated name, for plain and size-prefixed buffers alike.
   No dependencies, fuzz-tested so it never panics on malformed input.
 - [proxypool](https://github.com/Mootjelh/proxypool) · rotating proxy pool
-  with cooldowns. Deliberately small: no health checks, because only your
-  own traffic can tell you whether an address works.
+  with cooldowns. Small: no health checks, because only your own traffic
+  can tell you whether an address works.
 - [hardiff](https://github.com/Mootjelh/hardiff) · compare two HTTP Archive
   captures. Matches requests by endpoint rather than by full URL, so a cache
   buster does not turn every call into one request removed and one added, and
