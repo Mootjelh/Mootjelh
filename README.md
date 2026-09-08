@@ -31,6 +31,10 @@ low-latency monitoring, and the full-stack tooling that operates it.
   the transport cache was written from a reconnecting dial holding a different
   mutex than the one guarding it, so a read and a write could overlap. Found
   with the race detector. Merged.
+- [bogdanfinn/fhttp#27](https://github.com/bogdanfinn/fhttp/pull/27) ·
+  a deflate body was sniffed and buffered while the response was still being
+  built, so over HTTP/2 the request never returned. gzip and brotli on the same
+  host were fine. Merged.
 
 ### Stack
 
