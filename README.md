@@ -20,6 +20,12 @@ low-latency monitoring, and the full-stack tooling that operates it.
   schema from sample buffers. Merges what each sample populated and writes the
   .fbs they imply, keeping the slot numbering right where a field nothing
   populated would otherwise shift every field after it.
+- [identlint](https://github.com/Mootjelh/identlint) · check that a request's
+  headers agree with the browser they claim to be: the version in User-Agent
+  against sec-ch-ua, the arbitrary brand Chromium puts in that list and where,
+  the platform and mobile hints, the encodings, a TLS profile name. The brand
+  rules are Chromium's own and were checked against Chrome, Edge and Brave on
+  the wire. Reads a header block or a whole HAR.
 
 ### Upstream
 
