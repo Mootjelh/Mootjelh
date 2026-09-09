@@ -55,8 +55,8 @@ scraping and database sync. Monitoring with sub-second reaction times.
 Dashboards and API backends to drive all of it.
 
 [**field-notes**](https://github.com/Mootjelh/field-notes) · what I learned
-from being confidently wrong 74 times while reverse engineering a
-bot-protected site. 71 of them were my own bug.
+from being confidently wrong 115 times while reverse engineering a
+bot-protected site. 110 of them were my own bug.
 
 Available for project work and monthly retainers.
 Reach me at [info@mh-automation.nl](mailto:info@mh-automation.nl).
