@@ -23,9 +23,10 @@ low-latency monitoring, and the full-stack tooling that operates it.
 - [identlint](https://github.com/Mootjelh/identlint) · check that a request's
   headers agree with the browser they claim to be: the version in User-Agent
   against sec-ch-ua, the arbitrary brand Chromium puts in that list and where,
-  the platform and mobile hints, the encodings, a TLS profile name. The brand
-  rules are Chromium's own and were checked against Chrome, Edge and Brave on
-  the wire. Reads a header block or a whole HAR.
+  the platform and mobile hints, the encodings, a TLS profile name, the header
+  order and the HTTP/2 pseudo-header order. The brand rules are Chromium's own
+  and were checked against Chrome, Edge, Brave and Opera GX on the wire, the
+  orders against Chromium and Firefox. Reads a header block or a whole HAR.
 
 ### Upstream
 
@@ -55,8 +56,8 @@ scraping and database sync. Monitoring with sub-second reaction times.
 Dashboards and API backends to drive all of it.
 
 [**field-notes**](https://github.com/Mootjelh/field-notes) · what I learned
-from being confidently wrong 115 times while reverse engineering a
-bot-protected site. 110 of them were my own bug.
+from being confidently wrong 122 times while reverse engineering a
+bot-protected site. 117 of them were my own bug.
 
 Available for project work and monthly retainers.
 Reach me at [info@mh-automation.nl](mailto:info@mh-automation.nl).
