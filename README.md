@@ -5,6 +5,16 @@ low-latency monitoring, and the full-stack tooling that operates it.
 
 ### Open source
 
+- [identlint](https://github.com/Mootjelh/identlint) · check that a request's
+  headers agree with the browser they claim to be: the version in User-Agent
+  against sec-ch-ua, the arbitrary brand Chromium puts in that list and where,
+  the platform and mobile hints, the encodings, a TLS profile name, the header
+  order, the HTTP/2 pseudo-header order and how header names are spelled over
+  HTTP/1.1. Every rule was measured on the wire against Chrome, Edge, Brave,
+  Opera GX and Firefox. Reads a header block or a whole HAR.
+- [field-notes](https://github.com/Mootjelh/field-notes) · what I learned
+  from being confidently wrong 122 times while reverse engineering a
+  bot-protected site. 117 of them were my own bug.
 - [flatread](https://github.com/Mootjelh/flatread) · read FlatBuffers
   buffers when you don't have the schema. Field access by vtable slot
   instead of by generated name, for plain and size-prefixed buffers alike.
@@ -20,13 +30,6 @@ low-latency monitoring, and the full-stack tooling that operates it.
   schema from sample buffers. Merges what each sample populated and writes the
   .fbs they imply, keeping the slot numbering right where a field nothing
   populated would otherwise shift every field after it.
-- [identlint](https://github.com/Mootjelh/identlint) · check that a request's
-  headers agree with the browser they claim to be: the version in User-Agent
-  against sec-ch-ua, the arbitrary brand Chromium puts in that list and where,
-  the platform and mobile hints, the encodings, a TLS profile name, the header
-  order and the HTTP/2 pseudo-header order. The brand rules are Chromium's own
-  and were checked against Chrome, Edge, Brave and Opera GX on the wire, the
-  orders against Chromium and Firefox. Reads a header block or a whole HAR.
 
 ### Upstream
 
@@ -42,6 +45,11 @@ low-latency monitoring, and the full-stack tooling that operates it.
   a deflate body was sniffed and buffered while the response was still being
   built, so over HTTP/2 the request never returned. gzip and brotli on the same
   host were fine. Merged.
+- [mikeknight85/PriceStalker#223](https://github.com/mikeknight85/PriceStalker/pull/223),
+  [#229](https://github.com/mikeknight85/PriceStalker/pull/229) · sec-ch-ua
+  carried a fixed GREASE brand in a fixed place, and Opera's Chromium version
+  was taken from its own OPR number. Ported Chromium's tables and measured
+  Opera's full version with an Accept-CH server. Merged.
 
 ### Stack
 
@@ -54,10 +62,6 @@ Request-based automation in Go: site modules, CLI tooling, and systems that
 have to stay fast under heavy concurrency. Real-time Discord tooling,
 scraping and database sync. Monitoring with sub-second reaction times.
 Dashboards and API backends to drive all of it.
-
-[**field-notes**](https://github.com/Mootjelh/field-notes) · what I learned
-from being confidently wrong 122 times while reverse engineering a
-bot-protected site. 117 of them were my own bug.
 
 Available for project work and monthly retainers.
 Reach me at [info@mh-automation.nl](mailto:info@mh-automation.nl).
