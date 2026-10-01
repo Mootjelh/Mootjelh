@@ -12,9 +12,10 @@ low-latency monitoring, and the full-stack tooling that operates it.
   order, the HTTP/2 pseudo-header order and how header names are spelled over
   HTTP/1.1. Every rule was measured on the wire against Chrome, Edge, Brave,
   Opera GX and Firefox. Reads a header block or a whole HAR.
-- [field-notes](https://github.com/Mootjelh/field-notes) · what I learned
-  from being confidently wrong 122 times while reverse engineering a
-  bot-protected site. 117 of them were my own bug.
+- [field-notes](https://github.com/Mootjelh/field-notes) · reading a
+  bot-protected site from the outside: telling a WAF block from an origin
+  error, a refused address from a gated target, and a fresh response from a
+  CDN copy a minute old. Measured, with the check for each.
 - [flatread](https://github.com/Mootjelh/flatread) · read FlatBuffers
   buffers when you don't have the schema. Field access by vtable slot
   instead of by generated name, for plain and size-prefixed buffers alike.
