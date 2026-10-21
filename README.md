@@ -42,10 +42,20 @@ low-latency monitoring, and the full-stack tooling that operates it.
   the transport cache was written from a reconnecting dial holding a different
   mutex than the one guarding it, so a read and a write could overlap. Found
   with the race detector. Merged.
+- [bogdanfinn/tls-client#272](https://github.com/bogdanfinn/tls-client/pull/272) ·
+  an https page that redirected to plain http on the same host failed with
+  `http2: unsupported scheme`. A URL without a port got 443 whatever its scheme,
+  so both shared one cached HTTP/2 transport. Merged.
+- [bogdanfinn/tls-client#274](https://github.com/bogdanfinn/tls-client/pull/274) ·
+  the header order given for a proxy CONNECT matched nothing when the names were
+  capitalised, so the proxy saw the headers in alphabetical order. Merged.
 - [bogdanfinn/fhttp#27](https://github.com/bogdanfinn/fhttp/pull/27) ·
   a deflate body was sniffed and buffered while the response was still being
   built, so over HTTP/2 the request never returned. gzip and brotli on the same
-  host were fine. Merged.
+  host were fine. Merged, in v0.7.0.
+- [bogdanfinn/fhttp#28](https://github.com/bogdanfinn/fhttp/pull/28) ·
+  an empty User-Agent went out as an empty header line over HTTP/1.1, where
+  net/http and fhttp's own HTTP/2 path leave it out. Merged, in v0.7.0.
 - [mikeknight85/PriceStalker#223](https://github.com/mikeknight85/PriceStalker/pull/223),
   [#229](https://github.com/mikeknight85/PriceStalker/pull/229) · sec-ch-ua
   carried a fixed GREASE brand in a fixed place, and Opera's Chromium version
