@@ -56,6 +56,10 @@ low-latency monitoring, and the full-stack tooling that operates it.
 - [bogdanfinn/fhttp#28](https://github.com/bogdanfinn/fhttp/pull/28) ·
   an empty User-Agent went out as an empty header line over HTTP/1.1, where
   net/http and fhttp's own HTTP/2 path leave it out. Merged, in v0.7.0.
+- [bogdanfinn/fhttp#33](https://github.com/bogdanfinn/fhttp/pull/33) ·
+  a Connection: close request over HTTP/2 was never sent when the first stream
+  was not 1, as with Firefox profiles. The pool took the fresh connection for a
+  used one and kept dialing new ones. Merged.
 - [mikeknight85/PriceStalker#223](https://github.com/mikeknight85/PriceStalker/pull/223),
   [#229](https://github.com/mikeknight85/PriceStalker/pull/229) · sec-ch-ua
   carried a fixed GREASE brand in a fixed place, and Opera's Chromium version
