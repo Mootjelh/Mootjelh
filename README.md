@@ -8,7 +8,7 @@ low-latency monitoring, and the full-stack tooling that operates it.
 - [identlint](https://github.com/Mootjelh/identlint) · check that a request's
   headers agree with the browser they claim to be: the version in User-Agent
   against sec-ch-ua, the arbitrary brand Chromium puts in that list and where,
-  the platform and mobile hints, the encodings, a TLS profile name, the header
+  the platform and mobile hints, the high-entropy hints, the encodings, a TLS profile name, the header
   order, the HTTP/2 pseudo-header order and how header names are spelled over
   HTTP/1.1. Every rule was measured on the wire against Chrome, Edge, Brave,
   Opera GX and Firefox. Reads a header block or a whole HAR.
